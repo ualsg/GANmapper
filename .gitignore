@@ -1,0 +1,11 @@
+.DS_Store
+debug*
+.polyaxon/
+datasets/
+checkpoints/
+results/
+build/
+dist/
+polyaxon/
+notebook/
+*.png
