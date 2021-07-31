@@ -9,9 +9,13 @@ from util.features.core import denoise, grow, contours, simplify, featurize, par
 
 
 class Building_features:
-    kernel_size_denoise = 4
-    kernel_size_grow = 3
-    simplify_threshold = 0.01
+    # kernel_size_denoise = 4
+    # kernel_size_grow = 3
+    # simplify_threshold = 0.01
+    kernel_size_denoise = 3
+    kernel_size_grow = 5
+    simplify_threshold = 0.0000001
+
 
     def __init__(self):
         self.features = []
@@ -22,7 +26,7 @@ class Building_features:
         # extract contours, simplify them and transform tile pixels into coordinates.
 
         denoised = denoise(mask, self.kernel_size_denoise)
-        grown = grow(denoised, self.kernel_size_grow)
+        #grown = grow(denoised, self.kernel_size_grow)
 
         # Contours have a hierarchy: for example an outer ring, and an inner ring for a polygon with a hole.
         #
@@ -34,7 +38,7 @@ class Building_features:
         #
         # In case of non-existend indices their index value is -1.
 
-        multipolygons, hierarchy = contours(grown)
+        multipolygons, hierarchy = contours(denoised)
 
         if hierarchy is None:
             return

@@ -39,13 +39,15 @@ def save_images(webpage, visuals, image_path, aspect_ratio=1.0, width=256):
     for label, im_data in visuals.items():
         im = util.tensor2im(im_data)
         if label == 'real_A':
-            image_name = 'realA/%s_%s.png' % (label, name)
+            image_name = 'realA/%s.png' % (name)
         if label == 'real_B':
-            image_name = 'real/%s_%s.png' % (label, name)
+            image_name = 'realB/%s.png' % (name)
         if label == 'fake_B':
-            image_name = 'fake/%s_%s.png' % (label, name)
+            image_name = 'fakeB/%s.png' % (name)
 
         save_path = os.path.join(image_dir, image_name)
+        dir_path = os.path.dirname(save_path)
+        Path(dir_path).mkdir(parents=True, exist_ok=True) # create subdirs
 
         util.save_image(im, save_path, aspect_ratio=aspect_ratio)
         ims.append(image_name)
@@ -53,7 +55,7 @@ def save_images(webpage, visuals, image_path, aspect_ratio=1.0, width=256):
         links.append(image_name)
     webpage.add_images(ims, txts, links, width=width)
 
-def save_images_for_test(webpage, visuals, image_path, aspect_ratio=1.0, width=256):
+def save_images_predict(webpage, visuals, image_path, aspect_ratio=1.0, width=256):
     """Save images to the disk.
 
     Parameters:

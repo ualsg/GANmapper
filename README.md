@@ -2,22 +2,12 @@
   <a href="https://ual.sg/">
     <img src="images/logo.jpg" alt="Logo">
   </a>
-  <h3 align="center">Roofpedia - Mapping Roofscapes with AI</h3>
-  <p align="center">
-    <br />
-    <a href="https://ual.sg/project/roofpedia/"><strong>Explore Sustainable Roofscapes Around the World »</strong></a>
-  </p>
+  <h3 align="center">GANmapper - Geospatial Content Generator</h3>
 </p>
 
-This is the official repo of Roofpedia, an open registry of green roofs and solar roofs across the globe identified by Roofpedia through deep learning.
+This is the official repo of GANmapper, a building footprint generator using Generative Adversarial Networks
 
-In this repo you will find:
-* A ready to use dataset of 1,812 manually labelled polygons of rooftop greenery and solar panels covering 8 cities.
-* A ready to use dataset of building footprints identified with Green Roofs and/or Solar roofs by Roofpedia.
-* A straight forward pipeline to run prediction on your own satellite image dataset
-* A guide on how you can tweak the pipeline to detect and tag roof features to OSM building footprints (coming up)
-
-## Running Roofpedia 
+## Running GANmapper 
 Steps:
 1. Install prequisites
 2. Use xxx script to obtain CRHD masks for prediction and training pair
@@ -72,9 +62,4 @@ Roofpedia is made possible by using the following packages
 * [Robosat](https://github.com/mapbox/robosat) - 
  mask to feature function is borrowed from robosat
 * [pix2pix](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix) - 
-pix2pix Model Architecture is heavily borrowed from the awesome repo by [junyanz](https://github.com/junyanz)
-
-
-
-"# GANmapper" 
-"# GANmapper" 
+Model Architecture is heavily borrowed from the awesome repo by [junyanz](https://github.com/junyanz)

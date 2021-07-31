@@ -30,7 +30,7 @@ import os
 from options.test_options import TestOptions
 from data import create_dataset
 from models import create_model
-from util.visualizer import save_images_for_test
+from util.visualizer import save_images_predict
 from util import html
 from tqdm import tqdm
 
@@ -62,5 +62,5 @@ if __name__ == '__main__':
         model.test()           # run inference
         visuals = model.get_current_visuals()  # get image results
         img_path = model.get_image_paths()     # get image paths (original dir)
-        save_images_for_test(webpage, visuals, img_path, aspect_ratio=opt.aspect_ratio, width=opt.display_winsize)
+        save_images_predict(webpage, visuals, img_path, aspect_ratio=opt.aspect_ratio, width=opt.display_winsize)
     webpage.save()  # save the HTML
