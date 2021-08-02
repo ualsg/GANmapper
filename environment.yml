@@ -8,6 +8,7 @@ dependencies:
 - torchvision
 - cudatoolkit=10.2
 - scipy
+- pip
 - pip:
   - dominate==2.4.0
   - Pillow==6.1.0

@@ -20,6 +20,7 @@ You could use `environment.yml` to create a conda environment for Roofpedia
 
   ```sh
   conda env create -f environment.yml
+  conda activate GANmapper
   ```
 
 ### Data Preparation
@@ -32,10 +33,10 @@ Predictions can be carried out by running the following sample code. The name of
   python predict_and_extract.py --city Berlin --type Solar
   ```
 ### Training
-By preparing your own labels, you can train your own model. Training options can be set under `config/train-config.toml`
+Prepare own labels in training the 
 
  ```sh
-  python train.py
+  python train.py --dataroot  --name <exp name> --model pix2pix --netG resnet_9blocks
   ```
 <!-- LICENSE -->
 ## License
