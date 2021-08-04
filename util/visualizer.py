@@ -56,7 +56,7 @@ def save_images(webpage, visuals, image_path, aspect_ratio=1.0, width=256):
     webpage.add_images(ims, txts, links, width=width)
 
 def save_images_predict(webpage, visuals, image_path, aspect_ratio=1.0, width=256):
-    """Save images to the disk.
+    """Save images to the disk in slippymap format.
 
     Parameters:
         webpage (the HTML class) -- the HTML webpage class that stores these imaegs (see html.py for more details)

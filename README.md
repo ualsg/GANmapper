@@ -8,37 +8,66 @@
 This is the official repo of GANmapper, a building footprint generator using Generative Adversarial Networks
 
 ## Running GANmapper 
-Steps:
-1. Install prequisites
-2. Use xxx script to obtain CRHD masks for prediction and training pair
-4. Predict for wanted city
-3. Convert prediction masks to polygons
-4. get result!
-### Prerequisites
+### 1. Install prerequisites
 
-You could use `environment.yml` to create a conda environment for Roofpedia
+Use `environment.yml` to create a conda environment for GANmapper
 
   ```sh
   conda env create -f environment.yml
   conda activate GANmapper
   ```
 
-### Data Preparation
-Save a geojson file of building polygons (can be done in QGIS)
-Extract the satellite tiles in slippymap format (can be done in QGIS)
-### Prediction
+### 2. Prediction
 Predictions can be carried out by running the following sample code. The name of the city depends on the name of each dataset.
-
  ```sh
-  python predict_and_extract.py --city Berlin --type Solar
+ python predict.py --dataroot <path to XYZ tile dir> --checkpoints_dir <path to checkpoint> --name <cityname> 
   ```
+
+Testing an area in LA:
+ ```sh
+ python predict.py --dataroot datasets/Exp4/LA/Source --checkpoints_dir checkpoints/Exp3 --name LA 
+  ```
+
+Testing an area in Singapore:
+ ```sh
+ python predict.py --dataroot datasets/Exp4/Singapore/Source --checkpoints_dir checkpoints/Exp3 --name Singapore 
+  ```
+
+The result will be produced in XYZ directories in `./results/<cityname>/test_latest/images/fake`
+
+You can choose to visualise the tiles in QGIS using a local WMTS server.
+
+For example, use the following url and choose Zomm 16 only.
+
+```
+file:///D:/GANmapper//results/Singapore/test_latest/images/fake/{z}/{x}/{y}.png
+```
+
+### Vectorization
+
+If you want the output to be in Geojson polygons, use `extract.py`
+
+```sh
+  python extract.py <tile_dir>  <out> 
+```
+
+```sh
+  python extract.py results/Exp4/LA/test_latest/images/fake LA.geojson
+```
+
+<!-- 
+### Data Preparation
+XYZ tiles can be prepared using QGIS. A script is prepared to 
 ### Training
-Prepare own labels in training the 
+
+python train.py --dataroot /dataset/Exp1/Color --name <Exp name> --model pix2pix --netG resnet_9blocks
+
 
  ```sh
   python train.py --dataroot  --name <exp name> --model pix2pix --netG resnet_9blocks
   ```
-<!-- LICENSE -->
+LICENSE -->
+
 ## License
 
 Distributed under the MIT License. See `LICENSE` for more information.
@@ -56,7 +85,7 @@ Project Link: [https://github.com/your_username/repo_name](https://github.com/yo
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
 
-Roofpedia is made possible by using the following packages
+GANmapper is made possible by using the following packages
 
 * [PyTorch](https://pytorch.org/)
 * [GeoPandas](https://geopandas.org/)
