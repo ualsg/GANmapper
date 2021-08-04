@@ -9,3 +9,4 @@ dist/
 polyaxon/
 notebook/
 *.png
+.polyaxonignore
