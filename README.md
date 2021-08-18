@@ -2,7 +2,10 @@
   <a href="https://ual.sg/">
     <img src="images/logo.jpg" alt="Logo">
   </a>
-  <h3 align="center">GANmapper - Geospatial Content Generator</h3>
+  <h3 align="center">GANmapper - Geospatial Content Filling</h3>
+  <a >
+    <img src="images/Summary.jpg" alt="Logo">
+  </a>
 </p>
 
 This is the official repo of GANmapper, a building footprint generator using Generative Adversarial Networks
@@ -80,8 +83,19 @@ Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.c
 
 Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name) -->
 
+## Citation
 
-
+If you like this work and would like to use it in a scientific context, please cite this article.
+```
+@misc{wu2021ganmapper,
+      title={GANmapper: geographical content filling}, 
+      author={Abraham Noah Wu and Filip Biljecki},
+      year={2021},
+      eprint={2108.04232},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
+}
+```
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
 
