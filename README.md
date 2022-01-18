@@ -20,7 +20,13 @@ Use `environment.yml` to create a conda environment for GANmapper
   conda activate GANmapper
   ```
 
-### 2. Prediction
+### 2. Download weights
+The weights files are available on figshare in the Checkpoints folder.
+
+```https://doi.org/10.6084/m9.figshare.15103128.v1```
+
+Place the `Checkpoints` folder in the repo.
+### 3. Prediction
 Predictions can be carried out by running the following sample code. The name of the city depends on the name of each dataset.
  ```sh
  python predict.py --dataroot <path to XYZ tile dir> --checkpoints_dir <path to checkpoint> --name <cityname> 
@@ -46,7 +52,7 @@ For example, use the following url and choose Zomm 16 only.
 file:///D:/GANmapper//results/Singapore/test_latest/images/fake/{z}/{x}/{y}.png
 ```
 
-### Vectorization
+### 4. Vectorization
 
 If you want the output to be in Geojson polygons, use `extract.py`
 

@@ -1,4 +1,4 @@
-from tqdm import tqdm
+ from tqdm import tqdm
 import cv2
 import numpy as np
 import geojson
@@ -18,7 +18,7 @@ def convert_binary(img_path):
     '''
     img = cv2.imread(img_path)
     img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-    thresh, img = cv2.threshold(img, 128, 255, cv2.THRESH_OTSU)
+    _, img = cv2.threshold(img, 10, 255, cv2.THRESH_BINARY)
     return img
 
 def mask_to_feature(mask_dir):
