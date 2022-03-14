@@ -93,17 +93,25 @@ Project Link: [https://github.com/your_username/repo_name](https://github.com/yo
 
 If you like this work and would like to use it in a scientific context, please cite this article.
 ```
-@misc{wu2021ganmapper,
-      title={GANmapper: geographical content filling}, 
-      author={Abraham Noah Wu and Filip Biljecki},
-      year={2021},
-      eprint={2108.04232},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV}
+@article{2022_ijgis_ganmapper, 
+  year = {2022}, 
+  author = {Wu, Abraham Noah and Biljecki, Filip}, 
+  title = {{GANmapper: geographical data translation}}, 
+  journal = {International Journal of Geographical Information Science}, 
+  doi = {10.1080/13658816.2022.2041643}
 }
 ```
+
+## Contact
+
+[Abraham Noah Wu](https://ual.sg/authors/abraham/), [Urban Analytics Lab](https://ual.sg), National University of Singapore, Singapore
+
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
+
+This research is part of the project Large-scale 3D Geospatial Data for Urban Analytics, which is supported by the National University of Singapore under the Start-Up Grant R-295-000-171-133.
+
+We gratefully acknowledge the sources of the used input data.
 
 GANmapper is made possible by using the following packages
 

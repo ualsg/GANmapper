@@ -1,0 +1,30 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+- family-names: "Wu"
+  given-names: "Abraham Noah"
+  orcid: "https://orcid.org/0000-0001-9586-3201"
+  affiliation: "National University of Singapore, Singapore"
+- family-names: "Biljecki"
+  given-names: "Filip"
+  orcid: "https://orcid.org/0000-0002-6229-7749"
+  affiliation: "National University of Singapore, Singapore"
+title: "GANmapper: geographical data translation"
+version: 1.0
+date-released: 2022-03-08
+url: "https://github.com/ualsg/GANmapper"
+preferred-citation:
+  type: article
+  authors:
+  - family-names: "Wu"
+    given-names: "Abraham Noah"
+    orcid: "https://orcid.org/0000-0001-9586-3201"
+    affiliation: "National University of Singapore, Singapore"
+  - family-names: "Biljecki"
+    given-names: "Filip"
+    orcid: "https://orcid.org/0000-0002-6229-7749"
+    affiliation: "National University of Singapore, Singapore"
+  doi: "10.1080/13658816.2022.2041643"
+  journal: "International Journal of Geographical Information Science"
+  title: "GANmapper: geographical data translation"
+  year: 2022
