@@ -91,14 +91,22 @@ Project Link: [https://github.com/your_username/repo_name](https://github.com/yo
 
 ## Citation
 
+A [paper](https://doi.org/10.1080/13658816.2022.2041643) about the work was published in _International Journal of Geographical Information Science_, and it is available open access [here](https://ual.sg/publication/2022-ijgis-ganmapper/2022-ijgis-ganmapper.pdf).
+
 If you like this work and would like to use it in a scientific context, please cite this article.
+
+Wu AN, Biljecki F (2022): GANmapper: geographical data translation. International Journal of Geographical Information Science, 36(7): 1394-1422. doi:10.1080/13658816.2022.2041643
+
 ```
-@article{2022_ijgis_ganmapper, 
-  year = {2022}, 
-  author = {Wu, Abraham Noah and Biljecki, Filip}, 
-  title = {{GANmapper: geographical data translation}}, 
-  journal = {International Journal of Geographical Information Science}, 
-  doi = {10.1080/13658816.2022.2041643}
+@article{2022_ijgis_ganmapper,
+ author = {Wu, Abraham Noah and Biljecki, Filip},
+ doi = {10.1080/13658816.2022.2041643},
+ journal = {International Journal of Geographical Information Science},
+ title = {{GANmapper: geographical data translation}},
+ volume = {36},
+ issue = {7},
+ pages = {1394-1422},
+ year = {2022}
 }
 ```
 
